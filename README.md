@@ -317,5 +317,5 @@ async run(client, message) {
 ---
 
 <div align="center">
-  <p>© 2024 Paper Discord. Developed by Acarfx.</p>
+  <p>© 2026 Paper Discord. Developed by Acarfx.</p>
 </div>
