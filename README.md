@@ -1,2 +1,313 @@
-# Paper-Discord
-Paper Discord is a highly scalable, plugin-based Discord bot framework built with discord.js v14+. (Coming soon v15)
+<div align="center">
+  <h1>📜 Paper Discord</h1>
+  <p>
+    <strong>Advanced Modular Discord Bot Infrastructure</strong><br>
+    Developed by <a href="https://acarfx.com">Acarfx</a>
+  </p>
+  
+  <p>
+    <a href="#türkçe">Türkçe</a> • <a href="#english">English</a>
+  </p>
+</div>
+
+---
+
+<h2 id="türkçe">🇹🇷 Türkçe Dokümantasyon</h2>
+
+**Paper Discord**, Discord.js v14 ile güçlendirilmiş, çoklu bot (multibot) mimarisine sahip, gelişmiş plugin sistemi sunan profesyonel bir altyapıdır. **Acarfx** tarafından geliştirilmiştir.
+
+### ✨ Özellikler
+
+- **Çoklu Bot Desteği:** Tek projede sınırsız sayıda bot çalıştırın (Bot1, Bot2...).
+- **Plugin Sistemi:** Modüler yapı. Özellikleri plugin olarak ekleyip çıkarın.
+- **Otomatik Yük Dengeleme:** Pluginleri botlara otomatik dağıtır veya tüm botlarda çalışmaya zorlar.
+- **Dahili Dashboard:** Web tabanlı yönetim paneli (Plugin: Dashboard).
+- **Prototip Desteği:** `String` ve `Message` sınıflarına eklenen özel metodlar.
+- **CLI Araçları:** Tek komutla bot veya plugin oluşturma sihirbazı.
+
+### 🚀 Geliştirici Araçları (CLI)
+
+#### 1. Yeni Bot Oluşturma
+
+```bash
+npm run bot
+```
+
+_Süreç: Bot ismini alır, `src/clients` altında klasörünü açar ve PM2/Ecosystem ayarlarını otomatik günceller._
+
+#### 2. Yeni Plugin Oluşturma
+
+```bash
+npm run plugin <Pluginİsmi>
+```
+
+_Örnek: `npm run plugin Moderation`_ (Dosya yapısını oluşturur)
+
+---
+
+### 🎨 ACARDJSComponentsV2 & Panel Sistemi
+
+Discord embedleri ve bileşenleri (buton, select menu) ile çalışmayı kolaylaştıran özel bir yapı.
+
+#### ⚡ Hızlı Kullanım (Message Prototipleri)
+
+Normal `message.reply` yerine, daha şık ve panel formatında mesaj atmak için aşağıdaki kısayolları kullanabilirsiniz:
+
+- **`.insend(options)`**: Kanala panel formatında mesaj atar.
+- **`.inreply(options)`**: Mesaja panel formatında cevap verir.
+
+**Örnek:**
+
+```javascript
+message.inreply({
+  title: "İşlem Başarılı",
+  texts: ["Kullanıcı başarıyla yasaklandı.", "Süre: 3 Gün"],
+  footer: "Moderasyon Sistemi",
+  color: "green", // veya hex kodu #00ff00
+});
+```
+
+#### 🛠️ Gelişmiş Kullanım (Manuel Oluşturma)
+
+Daha karmaşık yapılar (Buton, Select Menu, Dosya ekleme) için paneli kendiniz oluşturabilirsiniz:
+
+```javascript
+// 1. Paneli oluştur
+const panel = message.createPanel(); // veya new ACARDJSComponentsV2(client)
+
+// 2. İçeriği ayarla
+panel
+  .setContainer()
+  .setColor("blue")
+  .addContent("# Başlık\nBu bir deneme mesajıdır.")
+  .addLine(); // Ayırıcı çizgi
+
+// 3. Buton Ekle
+panel.addComponents([
+  { type: 2, style: 1, label: "Onayla", custom_id: "onayla_btn" },
+  { type: 2, style: 4, label: "İptal", custom_id: "iptal_btn" },
+]);
+
+// 4. Gönder
+panel.send(message.channel.id);
+```
+
+---
+
+### 🧩 Plugin Geliştirme Rehberi
+
+#### 1. Ayarları Tanımlama (`manifest.json`)
+
+```json
+{
+  "name": "Moderation",
+  "version": "1.0.0",
+  "settings": [
+    {
+      "name": "logChannel",
+      "type": "channel",
+      "description": "Log kanalı",
+      "default": null
+    }
+  ]
+}
+```
+
+#### 2. Ayarlara Kod İçinden Erişme
+
+```javascript
+async run(client, message) {
+    const guildSettings = await client.getGuildSettings(message.guild.id);
+    const logVal = guildSettings.pluginSettings?.get('Moderation')?.settings?.get('logChannel');
+
+    if (!logVal) return;
+    const channel = message.guild.channels.cache.get(logVal);
+    if (channel) channel.send("Veri çekildi!");
+}
+```
+
+---
+
+### 🛠️ Diğer Prototipler
+
+#### Message Prototipleri
+
+- **`.timedReply(content, ms)`**: Mesajı cevaplar ve belirtilen süre sonra (milisaniye) siler.
+  ```javascript
+  message.timedReply("Bu mesaj 5 saniye sonra silinecek!", 5000);
+  ```
+
+#### String Prototipleri
+
+- **`.splitMessage(options)`**: Uzun metinleri böler ve codeblock içine alır.
+  ````javascript
+  const chunks = text.splitMessage({
+    maxLength: 1900,
+    prepend: "```js\n",
+    append: "\n```",
+  });
+  ````
+- **`.toTitleCase()`**: Baş harfleri büyütür.
+
+---
+
+### 🌐 Dashboard Plugini
+
+- **Adres:** `http://localhost:3000`
+- **Şifre:** `acarfx2025`
+- **Özellikler:** Pluginleri aç/kapa, ayarları webden düzenle.
+
+---
+
+<h2 id="english">🇺🇸 English Documentation</h2>
+
+**Paper Discord** is a professional Discord bot infrastructure powered by Discord.js v14, featuring multi-bot architecture and an advanced plugin system. Developed by **Acarfx**.
+
+### ✨ Features
+
+- **Multi-Bot Support:** Run unlimited bot instances in a single project.
+- **Plugin System:** Modular architecture. Add or remove features as plugins.
+- **Auto Load Balancing:** Automatically distributes plugins across bots.
+- **Built-in Dashboard:** Web-based administration panel.
+- **Prototype Support:** Custom methods added to `String` and `Message` classes.
+- **CLI Tools:** Wizards for creating bots and plugins effortlessly.
+
+### 🎨 ACARDJSComponentsV2 & Panel System
+
+A powerful utility to simplify working with Discord embeds and components (buttons, select menus).
+
+#### ⚡ Quick Usage (Message Prototypes)
+
+Instead of standard replies, use these shortcuts for stylish panel messages:
+
+- **`.insend(options)`**: Sends a panel message to the channel.
+- **`.inreply(options)`**: Replies with a panel message.
+
+**Example:**
+
+```javascript
+message.inreply({
+  title: "Operation Successful",
+  texts: ["User has been banned.", "Duration: 3 Days"],
+  footer: "Moderation System",
+  color: "green",
+});
+```
+
+#### 🛠️ Advanced Usage (Manual Builder)
+
+For complex UIs (Buttons, Select Menus, Files):
+
+```javascript
+// 1. Create Panel
+const panel = message.createPanel();
+
+// 2. Set Content
+panel
+  .setContainer()
+  .setColor("blue")
+  .addContent("# Title\nThis is a test message.")
+  .addLine();
+
+// 3. Add Buttons
+panel.addComponents([
+  { type: 2, style: 1, label: "Confirm", custom_id: "confirm_btn" },
+  { type: 2, style: 4, label: "Cancel", custom_id: "cancel_btn" },
+]);
+
+// 4. Send
+panel.send(message.channel.id);
+```
+
+---
+
+### 🚀 Developer Tools (CLI)
+
+#### 1. Creating a New Bot
+
+```bash
+npm run bot
+```
+
+#### 2. Creating a New Plugin
+
+```bash
+npm run plugin <PluginName>
+```
+
+---
+
+### 🧩 Plugin Development Guide
+
+#### 1. Defining Settings (`manifest.json`)
+
+```json
+{
+  "name": "Moderation",
+  "version": "1.0.0",
+  "settings": [
+    {
+      "name": "logChannel",
+      "type": "channel",
+      "description": "Log channel",
+      "default": null
+    }
+  ]
+}
+```
+
+#### 2. Accessing Settings (Code Example)
+
+```javascript
+async run(client, message) {
+    const guildSettings = await client.getGuildSettings(message.guild.id);
+    const logVal = guildSettings.pluginSettings?.get('Moderation')?.settings?.get('logChannel');
+
+    if (!logVal) return;
+    const channel = message.guild.channels.cache.get(logVal);
+    if (channel) channel.send("Data fetched!");
+}
+```
+
+---
+
+### 🛠️ Other Prototypes
+
+#### Message Prototypes
+
+- **`.timedReply(content, ms)`**: Replies and auto-deletes after X ms.
+  ```javascript
+  message.timedReply("This message will self-destruct in 5s!", 5000);
+  ```
+
+#### String Prototypes
+
+- **`.splitMessage(options)`**: Splits long text into chunks with codeblocks.
+- **`.toTitleCase()`**: Converts string to Title Case.
+
+---
+
+### 🌐 Dashboard Plugin
+
+- **URL:** `http://localhost:3000`
+- **Password:** `acarfx2025`
+- **Features:** Toggle plugins, manage settings via UI.
+
+<img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/fdb3a6ea-7fb5-4628-a6b9-b5963f60797f" />
+<img width="273" height="916" alt="image" src="https://github.com/user-attachments/assets/350b728f-1ad2-4802-a2e5-3bcbfad5e358" />
+<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/5c291089-59d0-40f1-92c0-5b6e2edfb77c" />
+<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/2007e92b-ea94-46f0-bb5c-eace0003334d" />
+<img width="1916" height="951" alt="image" src="https://github.com/user-attachments/assets/b91b6011-827b-4361-b49d-7eead43fc823" />
+<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/056c1a07-ea18-4589-939e-a879774e51c1" />
+<img width="1919" height="934" alt="image" src="https://github.com/user-attachments/assets/d55fb2ed-1333-4416-8b57-18e7944abd40" />
+<img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/66a45fd4-bcd8-4015-8a58-ef7f47f90dbf" />
+<img width="1918" height="938" alt="image" src="https://github.com/user-attachments/assets/8640a147-8b86-4c0d-b4da-536d05fceeb8" />
+
+
+
+
+---
+
+<div align="center">
+  <p>© 2024 Paper Discord. Developed by Acarfx.</p>
+</div>
