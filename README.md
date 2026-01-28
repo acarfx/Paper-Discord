@@ -2,7 +2,7 @@
   <h1>📜 Paper Discord</h1>
   <p>
     <strong>Advanced Modular Discord Bot Infrastructure</strong><br>
-    Developed by <a href="https://acarfx.com">Acarfx</a>
+    Developed by <a href="https://acarfx.com">Acarfx</a> & <a href="https://twitch.tv/tefottas"></a>
   </p>
   
   <p>
