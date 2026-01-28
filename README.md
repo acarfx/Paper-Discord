@@ -156,7 +156,15 @@ async run(client, message) {
 - **Adres:** `http://localhost:3000`
 - **Şifre:** `acarfx2025`
 - **Özellikler:** Pluginleri aç/kapa, ayarları webden düzenle.
-
+<img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/fdb3a6ea-7fb5-4628-a6b9-b5963f60797f" />
+<img width="273" height="916" alt="image" src="https://github.com/user-attachments/assets/350b728f-1ad2-4802-a2e5-3bcbfad5e358" />
+<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/5c291089-59d0-40f1-92c0-5b6e2edfb77c" />
+<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/2007e92b-ea94-46f0-bb5c-eace0003334d" />
+<img width="1916" height="951" alt="image" src="https://github.com/user-attachments/assets/b91b6011-827b-4361-b49d-7eead43fc823" />
+<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/056c1a07-ea18-4589-939e-a879774e51c1" />
+<img width="1919" height="934" alt="image" src="https://github.com/user-attachments/assets/d55fb2ed-1333-4416-8b57-18e7944abd40" />
+<img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/66a45fd4-bcd8-4015-8a58-ef7f47f90dbf" />
+<img width="1918" height="938" alt="image" src="https://github.com/user-attachments/assets/8640a147-8b86-4c0d-b4da-536d05fceeb8" />
 ---
 
 <h2 id="english">🇺🇸 English Documentation</h2>
