@@ -94,6 +94,23 @@ panel.send(message.channel.id);
 
 ---
 
+### 🎨 TefottasInteractionV2Modal & Modal Sistemi
+
+Discord modal sistemi için geliştirilmiş sistem (seçim menüleri, dosya yükleme sistemi) ile çalışmayı kolaylaştırdığımız özel bir yapı
+
+Normal şartlarda bir modal sistemine eskiden sadece text olarak kullanabiliyorduk. 
+
+Artık içerisinde bulunan;
+- **`.addTextInput`** Normal yazım sistemini açar.
+- **`.addStringSelect`** Kendi oluşturduğunuz menü seçme formatını açar.
+- **`.addUserSelect`** Kullanıcı seçme menü formatını açar.
+- **`.addRoleSelect`** Rol seçme menü formatını açar.
+- **`.addChannelSelect`** Kanal seçme menü formatını açar.
+- **`.addFileUpload`** Dosya yükleme formatını açar.
+
+Sistemimiz sayesinde hem kolay bir kullanım sunarken, hemde zarif ve güzel tasarımlı modallarınızı kullanabilirsiniz.
+
+
 ### 🧩 Plugin Geliştirme Rehberi
 
 #### 1. Ayarları Tanımlama (`manifest.json`)
@@ -247,6 +264,22 @@ npm run plugin <PluginName>
 ```
 
 ---
+
+### 🎨 TefottasInteractionV2Modal & Modal System
+
+A specialized structure we developed to simplify working with the Discord modal system (enhancing it with selection menus and a file upload system).
+
+Previously, modals could strictly be used for text inputs only.
+
+Now, with the built-in features:
+- **`.addTextInput`** Opens the standard text input system.
+- **`.addStringSelect`** Opens a custom menu selection format that you define.
+- **`.addUserSelect`** Opens the user selection menu format.
+- **`.addRoleSelect`** Opens the role selection menu format.
+- **`.addChannelSelect`** Opens the channel selection menu format.
+- **`.addFileUpload`** Opens the file upload format.
+
+Thanks to our system, you can enjoy both ease of use and deploy elegant, beautifully designed modals.
 
 ### 🧩 Plugin Development Guide
 
