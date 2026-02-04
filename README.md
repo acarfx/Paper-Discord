@@ -110,6 +110,8 @@ Artık içerisinde bulunan;
 
 Sistemimiz sayesinde hem kolay bir kullanım sunarken, hemde zarif ve güzel tasarımlı modallarınızı kullanabilirsiniz.
 
+---
+
 
 ### 🧩 Plugin Geliştirme Rehberi
 
