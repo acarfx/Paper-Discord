@@ -156,15 +156,18 @@ async run(client, message) {
 - **Adres:** `http://localhost:3000`
 - **Şifre:** `acarfx2025`
 - **Özellikler:** Pluginleri aç/kapa, ayarları webden düzenle.
-<img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/fdb3a6ea-7fb5-4628-a6b9-b5963f60797f" />
-<img width="273" height="916" alt="image" src="https://github.com/user-attachments/assets/350b728f-1ad2-4802-a2e5-3bcbfad5e358" />
-<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/5c291089-59d0-40f1-92c0-5b6e2edfb77c" />
-<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/2007e92b-ea94-46f0-bb5c-eace0003334d" />
-<img width="1916" height="951" alt="image" src="https://github.com/user-attachments/assets/b91b6011-827b-4361-b49d-7eead43fc823" />
-<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/056c1a07-ea18-4589-939e-a879774e51c1" />
-<img width="1919" height="934" alt="image" src="https://github.com/user-attachments/assets/d55fb2ed-1333-4416-8b57-18e7944abd40" />
-<img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/66a45fd4-bcd8-4015-8a58-ef7f47f90dbf" />
-<img width="1918" height="938" alt="image" src="https://github.com/user-attachments/assets/8640a147-8b86-4c0d-b4da-536d05fceeb8" />
+<img width="1912" height="887" alt="image" src="https://github.com/user-attachments/assets/78cadfe2-c2ba-493c-b2d8-4dd61c4a46cd" />
+<img width="1911" height="888" alt="image" src="https://github.com/user-attachments/assets/21a0d269-9bb6-4d48-b094-a224a99770b7" />
+<img width="1907" height="886" alt="image" src="https://github.com/user-attachments/assets/36a7987c-de4a-4e28-bcec-a687a7ccead6" />
+<img width="1909" height="886" alt="image" src="https://github.com/user-attachments/assets/5db03990-edca-4c52-a117-ce45471235c2" />
+<img width="1911" height="887" alt="image" src="https://github.com/user-attachments/assets/0e340815-7636-4bc1-a417-7e78def03989" />
+<img width="1863" height="919" alt="image" src="https://github.com/user-attachments/assets/597f4fdd-abb2-4da3-a647-2019e9abad79" />
+
+
+
+
+
+
 ---
 
 <h2 id="english">🇺🇸 English Documentation</h2>
@@ -301,15 +304,13 @@ async run(client, message) {
 - **Password:** `acarfx2025`
 - **Features:** Toggle plugins, manage settings via UI.
 
-<img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/fdb3a6ea-7fb5-4628-a6b9-b5963f60797f" />
-<img width="273" height="916" alt="image" src="https://github.com/user-attachments/assets/350b728f-1ad2-4802-a2e5-3bcbfad5e358" />
-<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/5c291089-59d0-40f1-92c0-5b6e2edfb77c" />
-<img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/2007e92b-ea94-46f0-bb5c-eace0003334d" />
-<img width="1916" height="951" alt="image" src="https://github.com/user-attachments/assets/b91b6011-827b-4361-b49d-7eead43fc823" />
-<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/056c1a07-ea18-4589-939e-a879774e51c1" />
-<img width="1919" height="934" alt="image" src="https://github.com/user-attachments/assets/d55fb2ed-1333-4416-8b57-18e7944abd40" />
-<img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/66a45fd4-bcd8-4015-8a58-ef7f47f90dbf" />
-<img width="1918" height="938" alt="image" src="https://github.com/user-attachments/assets/8640a147-8b86-4c0d-b4da-536d05fceeb8" />
+<img width="1912" height="887" alt="image" src="https://github.com/user-attachments/assets/78cadfe2-c2ba-493c-b2d8-4dd61c4a46cd" />
+<img width="1911" height="888" alt="image" src="https://github.com/user-attachments/assets/21a0d269-9bb6-4d48-b094-a224a99770b7" />
+<img width="1907" height="886" alt="image" src="https://github.com/user-attachments/assets/36a7987c-de4a-4e28-bcec-a687a7ccead6" />
+<img width="1909" height="886" alt="image" src="https://github.com/user-attachments/assets/5db03990-edca-4c52-a117-ce45471235c2" />
+<img width="1911" height="887" alt="image" src="https://github.com/user-attachments/assets/0e340815-7636-4bc1-a417-7e78def03989" />
+<img width="1863" height="919" alt="image" src="https://github.com/user-attachments/assets/84df31d3-4b13-4d53-9e00-45610baf3603" />
+
 
 
 
